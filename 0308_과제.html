@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang=“ko”>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Show and hide</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<style>
+    button {
+        padding:20px 20px;
+        display:inline-block;
+        font-size: 20px;
+    }
+    img {
+        padding:30px;
+        display:block;
+    }
+</style>
+<body>
+    <div>
+        <button class="btn_1">Explorer</button>
+        <button class="btn_2">Github</button>
+        <button class="btn_3">Apple</button>
+        <button class="btn_4">LinkedIn</button>
+    </div>
+    <div>
+        <img class="change" src="iconfinder_online_social_media_internet_explorer_734385.png">
+        <img class="change1" src="iconfinder_social_media_logo_github_1221585.png">
+        <img class="change2" src="iconfinder_online_social_media_apple_734360.png">
+        <img class="change3" src="social-linkedin.png">
+    </div>
+    <script type="text/javascript">
+    $(".change").hide();
+    $(".change1").hide();
+    $(".change2").hide();
+    $(".change3").hide();
+
+    $(".btn_1").click(function(e){
+        e.preventDefault()
+        $(".change").show();
+        $(".change1").hide();
+        $(".change2").hide();
+        $(".change3").hide();
+    });
+    $(".btn_2").click(function(e){
+        e.preventDefault()
+        $(".change").hide();
+        $(".change1").show();
+        $(".change2").hide();
+        $(".change3").hide();
+    });
+    $(".btn_3").click(function(e){
+        e.preventDefault()
+        $(".change").hide();
+        $(".change1").hide();
+        $(".change2").show();
+        $(".change3").hide();
+    });
+    $(".btn_4").click(function(e){
+        e.preventDefault()
+        $(".change").hide();
+        $(".change1").hide();
+        $(".change2").hide();
+        $(".change3").show();
+    });
+    </script>
+</body>
+</html>
