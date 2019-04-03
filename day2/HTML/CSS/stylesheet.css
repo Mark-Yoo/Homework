@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -8,8 +7,8 @@
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+ abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
@@ -37,23 +36,27 @@ ul {
 blockquote, q {
     quotes: none;
 }    
+a {
+    text-decoration: none;
+}
 .container {
     background:silver;
 }
-
 
 .header, .main, .article, .footer {
     width:1200px;
     margin: 0 auto;
 }
 .header {
-    background:pink;
+    height:95px;
 }
 .logo {
     position: absolute;
+    margin: 35px 0;
+}
+.logo img {
     width:70px;
     height:25px;
-    margin: 35px 0;
 }
 .navigation {
     position: relative;
@@ -70,13 +73,21 @@ blockquote, q {
 }
 .sub-menu {
     display:none;
+    position: absolute;
+}
+.menu-item:hover .sub-menu {
+    display:block;
 }
 .diffLang {
+    position: relative;
     display:inline-block;
+    font-size:20px;
 }
 .dropdown {
     position: relative;
-    display: inline-block;    
+    display: inline-block;
+    margin-left:50px;
+    font-size:20px; 
 }
 .dropdown-content {
     display:none;
@@ -89,7 +100,19 @@ blockquote, q {
 .dropdown:hover .dropdown-content {
     display:block;
 }
-
+.main {
+    background:yellow;
+    height:1110px;
+}
+.mission {
+    background:pink;
+    height:610px;
+    text-align: center;
+}
+.slogan {
+    padding-top:250px;
+    font-size:40px;
+}
 /* 각 메뉴별 읽어올 이름 숨김 창 */
 .readable-hidden {
     position: absolute;
