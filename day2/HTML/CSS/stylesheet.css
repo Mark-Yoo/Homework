@@ -145,6 +145,21 @@ a {
     color:gray;
     font-size:0.9rem;
 }
+.footer {
+    height:80px;
+    display:inline-block;
+}
+.policyList {
+    display:inline-block;
+    margin-left:20px;
+    padding-top:50px;
+}
+.footer li:nth-child(n+2)::before {
+    content : "|";
+}
+.policyContent {
+    display:inline-block;
+}
 /* 각 메뉴별 읽어올 이름 숨김 창 */
 .readable-hidden {
     position: absolute;
