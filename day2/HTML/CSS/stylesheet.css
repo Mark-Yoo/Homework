@@ -39,9 +39,6 @@ blockquote, q {
 a {
     text-decoration: none;
 }
-.container {
-    background:silver;
-}
 
 .header, .main, .article, .footer {
     width:1200px;
@@ -101,7 +98,6 @@ a {
     display:block;
 }
 .main {
-    background:yellow;
     height:1110px;
 }
 .mission {
@@ -112,6 +108,42 @@ a {
 .slogan {
     padding-top:250px;
     font-size:40px;
+}
+.news {
+    padding: 75px 0;
+    height:500px;
+}
+.news-list {
+    display:inline-block;
+}
+.news-list-content {
+    font-size:20px;
+    margin:35px 0;
+}
+.news-list-sub {
+    color:#02B900;
+    font-size:0.9rem;
+}
+.news-title {
+    font-size : 25px;
+}
+.core {
+    height:200px;
+    background: #f9f9f9;
+}
+.coreMenu {
+    text-align: center;
+}
+.coreMenu-content {
+    display:inline-block;
+    width:215px;
+    text-align: left;
+    margin:50px 40px;
+    font-size:20px;
+}
+.coreMenu-sub {
+    color:gray;
+    font-size:0.9rem;
 }
 /* 각 메뉴별 읽어올 이름 숨김 창 */
 .readable-hidden {
