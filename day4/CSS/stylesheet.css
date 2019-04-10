@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ul {
+	list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}    
+a {
+    text-decoration: none;
+}
+.header, .main, .coreMenu, .footer {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* header with logo, navigation menu, sitemap, foreign language dropdown */
+.header {
+    position: relative;
+}
+.logo {
+    margin-top:20px;
+    position: absolute;
+}
+.logo img {
+    width:70px;
+    height:25px;
+}
+.menu {
+    position:relative;
+    display: inline-block;
+    margin-left: 230px;
+    width:760px;
+}
+.menu-item {
+    padding: 25px;
+    display: inline-block;
+    font-size:18px;
+}
+.menu-item a:link {
+    color:black;
+}
+.menu-item a:visited {
+    color:black;
+}
+.site-item {
+    margin-top:25px;
+    float:right;
+    font-size:18px;
+}
+.site-item a:link {
+    color:gray;
+}
+.site-item a:visited {
+    color:gray;
+}
+
+.sub-menu {
+    background: #eee;
+    display:none;
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+    white-space: nowrap;
+    padding-top:45px;
+}
+.second-sub-menu {
+    display: none;
+}
+/* .sub-menu1 {
+    margin-left: -255px;
+    width:1200px;
+} */
+/* .sub-menu2 {
+    margin-left: -371px;
+    width:1200px;
+}
+.sub-menu3 {
+    margin-left: -456px;
+    width:1200px;
+}
+.sub-menu4 {
+    margin-left: -542px;
+    width:1200px;
+} */
+.sub-menu li {
+    background: lime;
+    padding-left:15px;
+}
+/* dropdown menu in pure css only */
+.dropdown-lang {
+    border:1px solid gray;
+    padding: 5px 25px;
+    border-radius: 40px;
+    font-size:18px;
+    position: absolute;
+    top:0;
+    right:0;
+    margin-top:20px;
+}
+.dropdown-lang li {
+    float:left;
+    position: relative;
+}
+.dropdown-lang label {
+    position: relative;
+    display: block;
+    transition:background 0.3s;
+    cursor:pointer;
+}
+.dropdown-lang label:after {
+    content:"";
+    position: absolute;
+    display: block;
+    top:50%;
+    right:-10px;
+    width:0;
+    height:0;
+    border-top:4px solid rgba(255,255,255,.5);
+    border-bottom:0 solid rgba(255,255,255,.5);
+    border-left:4px solid transparent;
+    border-right:4px solid transparent;
+    transition:border-bottom .1s, border-top .1s .1s;
+    
+}
+#foreign-text {
+    display:none;
+}
+#foreign-text:checked ~ ul.foreign-content {
+    max-height:300px;
+    transition:max-height 0.5s ease-in;
+}
+.foreign-content {
+    max-height:0;
+    padding:0;
+    overflow:hidden;
+    list-style-type:none;
+    background:#fff;
+    transition:max-height 0.5s ease-out;
+    position: absolute;
+    min-width:100%;
+}
+.foreign-content li a {
+    display:block;
+    float:left;
+    padding:12px;
+    white-space: nowrap;
+}
+.foreign-content li a:hover {
+    background:rgba(0,0,0,.3);
+}
+
+.line-mission {
+    display:block;
+}
+.sub-menu li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu-item:hover .sub-menu {
+    display:block;
+}
+
+
+
+.main {
+    background: yellow;
+}
+.coreMenu {
+    background: pink;
+}
+.footer {
+    background: green;
+}
+/* 각 메뉴별 읽어올 이름 숨김 창 */
+.readable-hidden {
+    position: absolute;
+    width:1px;
+    height: 1px;
+    overflow:hidden;
+    margin:-1px;
+    clip:rect(0 0 0 0);
+}
