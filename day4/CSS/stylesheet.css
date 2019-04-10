@@ -39,14 +39,18 @@ blockquote, q {
 a {
     text-decoration: none;
 }
-.header, .main, .coreMenu, .footer {
+
+.header, .news, .coreMenu, .footer {
     width: 1200px;
     margin: 0 auto;
 }
 
 /* header with logo, navigation menu, sitemap, foreign language dropdown */
 .header {
-    position: relative;
+    position: sticky;
+    top:0;
+    background: #fff;
+    z-index: 1;
 }
 .logo {
     margin-top:20px;
@@ -89,8 +93,6 @@ a {
     background: #eee;
     display:none;
     position: absolute;
-    align-content: center;
-    justify-content: center;
     white-space: nowrap;
     padding-top:45px;
 }
@@ -116,6 +118,8 @@ a {
 .sub-menu li {
     background: lime;
     padding-left:15px;
+    display: inline-block;
+    position: relative;
 }
 /* dropdown menu in pure css only */
 .dropdown-lang {
@@ -179,23 +183,37 @@ a {
 .foreign-content li a:hover {
     background:rgba(0,0,0,.3);
 }
-
-.line-mission {
-    display:block;
-}
-.sub-menu li {
-    display: inline-block;
-    position: relative;
-}
-
 .menu-item:hover .sub-menu {
     display:block;
 }
-
+.line-video {
+    height:610px;
+    position: relative;
+    width:100%;
+    background-position:50%, 50%;
+    overflow: hidden;
+}
+.line-video-content{
+    display:block;
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:1920px;
+    height:610px;
+    transform: translate(-50%, -50%);
+    overflow:hidden;
+}
 
 
 .main {
     background: yellow;
+}
+.mission {
+    background: skyblue;
+}
+.slogan {
+    display: inline-block;
+    justify-content: center;
 }
 .coreMenu {
     background: pink;
